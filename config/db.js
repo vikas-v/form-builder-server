@@ -2,4 +2,5 @@
 // Database Config
 // ===============
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/form-builder', {useNewUrlParser: true});
+const config = require('./');
+mongoose.connect(config.db_url, {useNewUrlParser: true});
